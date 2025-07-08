@@ -104,7 +104,7 @@ src/
 
 4. **Open in browser**
 
-   Visit [http://localhost:5173](http://localhost:5173)
+   Visit [https://entnt-technical.vercel.app/](https://entnt-technical.vercel.app/)
 
 ---
 
