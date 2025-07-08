@@ -32,14 +32,42 @@ This is a **frontend-only** React-based dental management system for a fictional
 ```
 
 src/
-├── components/         # UI components (Sidebar, LoginForm, etc.)
-│   └── ui/
-├── context/            # React Contexts (Auth, Data)
-├── pages/              # Page-level components (Dashboard, PatientsPage, etc.)
-├── utils/              # Utility logic (auth.js, data.js)
-├── App.jsx             # Main app with routing
-├── main.jsx            # Entry point
-└── index.css           # Global styles
+├── assets/
+├── components/
+│   ├── auth/
+│   │   ├── LoginForm.jsx
+│   ├── dashboard/
+│   │   ├── KPICard.jsx
+│   │   ├── NextAppointments.jsx
+│   ├── incidents/
+│   │   ├── IncidentForm.jsx
+│   │   ├── IncidentList.jsx
+│   ├── layout/
+│   │   ├── Header.jsx
+│   │   ├── Sidebar.jsx
+│   ├── patients/
+│   │   ├── PatientForm.jsx
+│   │   ├── PatientList.jsx
+│   ├── ui/
+│   │   ├── CalendarView.jsx
+│   │   ├── FileUpload.jsx
+│   │   ├── ProtectedRoute.jsx
+├── context/
+│   ├── AuthContext.jsx
+│   ├── DataContext.jsx
+├── pages/
+│   ├── AdminDashboard.jsx
+│   ├── CalendarPage.jsx
+│   ├── Home.jsx
+│   ├── IncidentsPage.jsx
+│   ├── Login.jsx
+│   ├── PatientsPage.jsx
+│   ├── PatientView.jsx
+├── utils/
+│   ├── auth.js
+│   ├── data.js
+├── App.jsx
+├── main.jsx
 
 ````
 
@@ -59,9 +87,8 @@ src/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/entnt-dental-frontend.git
-   cd entnt-dental-frontend
-````
+   git clone https://github.com/omkarhacker/ENTNT-Technical.git
+   ```
 
 2. **Install dependencies**
 
@@ -83,48 +110,8 @@ src/
 
 ## ⚙️ Technical Decisions
 
-* **No backend**: All data is stored in browser's `localStorage`, initialized on first load.
-* **Auth simulation**: Login uses hardcoded user credentials checked against `localStorage`.
-* **Routing with protection**: Admin and Patient routes are protected using a `ProtectedRoute` component that checks role.
-* **UI framework**: Used Tailwind CSS for rapid UI development and responsive layout.
-* **Separation of concerns**: Context API is used for global state management of auth and app data.
-
----
-
-## 🐞 Known Issues / Limitations
-
-* ❌ No registration or password reset functionality
-* ❌ No real backend or API integration
-* ❌ All data is reset when clearing browser storage
-* 🧪 Minimal validation (e.g. email format is not enforced)
-* 📅 Calendar page is static and not functional
-
----
-
-## 🧼 Recommendations for Future Improvement
-
-* ✅ Replace `localStorage` with real backend (Node.js + MongoDB)
-* ✅ Implement secure authentication (JWT, sessions)
-* ✅ Add registration and password reset
-* ✅ Integrate calendar with actual appointment logic
-* ✅ Add validations, better UX, and file upload preview
-
----
-
-## 👤 Author
-
-* **Omkar Gadam**
-* Final Year B.Tech CSE | MERN Stack Developer
-
----
-
-## 📬 Contact
-
-For queries or feedback: \[[your-email@example.com](mailto:your-email@example.com)]
-
-```
-
----
-
-Let me know if you want this README exported as a `.md` file, or if you want it tailored for deployment (like if you're hosting it on Vercel or Netlify).
-```
+- **No backend**: All data is stored in browser's `localStorage`, initialized on first load.
+- **Auth simulation**: Login uses hardcoded user credentials checked against `localStorage`.
+- **Routing with protection**: Admin and Patient routes are protected using a `ProtectedRoute` component that checks role.
+- **UI framework**: Used Tailwind CSS for rapid UI development and responsive layout.
+- **Separation of concerns**: Context API is used for global state management of auth and app data.
